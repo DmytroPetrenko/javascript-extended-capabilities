@@ -1,8 +1,12 @@
 let nums = {
   *getRange(start, end) {
     while (start <= end) {
-      yield start;
-      start++;
+      if (start == 49) {
+        throw new Error('Hate ur 49 number');
+      } else {
+        yield start;
+        start++;
+      }
     }
   },
 };
@@ -10,11 +14,11 @@ let nums = {
 let simples = new Array();
 
 for (const current of nums.getRange(1, 50)) {
-  if (current == 49) {
-    let error = new Error("Hate ur 49 number");
-    console.log(error);
-    break;
-  }
+  //   if (current == 49) {
+  //     let error = new Error("Hate ur 49 number");
+  //     console.log(error);
+  //     break;
+  //   }
   let flag = true;
 
   if (current == 1 || current == 2) {
