@@ -50,26 +50,7 @@ function fetchCommentsJson(id) {
         });
       })();
     });
-
-    // const posts = await client
-    //   .getUserPosts(await client.getUser("2").then((user) => {
-    //     console.log(`User name: ${user[0].name}`);
-    //   }))
-    //   .then((posts) => {
-    //     console.log(`User posts: ${posts}`);
-    //   });
   } catch (error) {
     console.error(`Error: ${error}`);
   }
 })();
-
-// (async () => {
-//   try {
-//     const client = new TestClient();
-//     const user = await client.getUser("2").then((user) => {
-//       console.log(`User name: ${user[0].name}`);
-//     });
-//   } catch (error) {
-//     console.error(`Error: ${error}`);
-//   }
-// })();
